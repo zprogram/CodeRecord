@@ -1,4 +1,4 @@
-﻿// 04_04_接收输入的字符串复制到动态分配的内存中然后返回值.cpp : 定义控制台应用程序的入口点。
+﻿// 04_04_����������ַ������Ƶ���̬������ڴ���Ȼ�󷵻�ֵ.cpp : �������̨Ӧ�ó������ڵ㡣
 //
 
 #include "stdafx.h"
@@ -11,17 +11,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	char hello[40];
 	char hello2[40] = "qwertyuiopasdfghjklzxcvbnm";
 	char * buffer;
-	printf(" 输入字符串 \n ");
+	printf(" �����ַ��� \n ");
 	gets_s(hello);
 
-	buffer = (char*)malloc(sizeof(hello2) + 1);              //开辟内存
+	buffer = (char*)malloc(sizeof(hello2) + 1);              //�����ڴ�
 	if(buffer == NULL){ exit(1); }
 
-	char* i = (char*)memcpy(hello2, hello, sizeof(hello2));  //内存复制
+	char* i = (char*)memcpy(hello2, hello, sizeof(hello2));  //�ڴ渴��
 
-	printf("输入值为： %s \n ",hello);
-	printf("复制值为： %s \n ", hello2);
-        printf("复制值为： %s \n ", i);                       //此时i指向了hello2的内存地址
+	printf("����ֵΪ�� %s \n ",hello);
+	printf("����ֵΪ�� %s \n ", hello2);
+        printf("����ֵΪ�� %s \n ", i);                       //��ʱiָ����hello2���ڴ��ַ
 	free(buffer);
 	
 	system("pause");

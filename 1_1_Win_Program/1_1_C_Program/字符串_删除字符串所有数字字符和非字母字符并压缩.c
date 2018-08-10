@@ -1,4 +1,4 @@
-﻿// 04_03_删除字符串所有数字字符和非字母字符并压缩.cpp : 定义控制台应用程序的入口点。
+﻿// 04_03_ɾ���ַ������������ַ��ͷ���ĸ�ַ���ѹ��.cpp : �������̨Ӧ�ó������ڵ㡣
 //
 
 #include "stdafx.h"
@@ -10,7 +10,7 @@ void replaceA_Z(char * str);
 int _tmain(int argc, _TCHAR* argv[])
 {
 
-	char str[40] = "abc12ef5ghij8#%%yz";   //这里不能定义char* 指针直接指向字符串常量，因为指针指向的值不能改变  
+	char str[40] = "abc12ef5ghij8#%%yz";   //���ﲻ�ܶ���char* ָ��ֱ��ָ���ַ�����������Ϊָ��ָ���ֵ���ܸı�  
 
 	replaceA_Z(str);
     //	printf("%s\n", replaceA_Z(str));
@@ -28,7 +28,7 @@ void replaceA_Z(char *str){
 			printf("%c", str[i]);
 		}
 	}
-	printf(" 正确结果应该为：acdefghijyz \n");
+	printf(" ��ȷ���Ӧ��Ϊ��acdefghijyz \n");
 
 	
 }
@@ -39,7 +39,7 @@ void replaceA_Z(char *str){
 //	p1 = str;
 //	p2 = str;
 //
-//	//基本方法就是依次将字母字符复制到字符串中  
+//	//���������������ν���ĸ�ַ����Ƶ��ַ�����  
 //	while (*p1 != '\0'){
 //		if ((*p1 >= 'a' && *p1 <= 'z') || (*p1 >= 'A' && *p1 <= 'Z')){
 //			*p2++ = *p1;
