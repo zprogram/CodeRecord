@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>LogonTracer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/jquery.qtip.css" integrity="sha384-EG4MkHYaMXjB6f2q1t0Jfs+W6DpGsGZls4D6PYHr9yhXwZf27Z10ReappeV2ZXcU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" integrity="sha384-CmLV3WR+cw/TcN50vJSYAs2EAzhDD77tQvGcmoZ1KEzxtpl2K5xkrpFz9N2H9ClN" crossorigin="anonymous">
+  <link rel="stylesheet" href="static/css/style.css">
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/2.2.1/jquery.qtip.js" integrity="sha384-6pAYkjo39N26cI9QEzy7zTD9xr9XzSnaWywG02LeFyoJnBEyYvWvqomLU+uGAlaw" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.1.1/cytoscape.min.js" integrity="sha256-lEMQOla3MoXVNUAEGAuu4n1XouEYLyZP3SRqe6BhpTY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-qtip/2.7.1/cytoscape-qtip.js" integrity="sha384-iEsLCgQ6cKWEBnP+3Yd8hsUSvCzDYQU/UUVvXzB10FMtPexDn68x5Sem24bboY4I" crossorigin="anonymous"></script>
+  <!-- Neo4j JavaScript Driver -->
+  <script src="https://cdn.rawgit.com/neo4j/neo4j-javascript-driver/1.4.1/lib/browser/neo4j-web.min.js" integrity="sha384-xu5q3iV0ueZtK1T6RpPoUqv4VlVuEJpax+yyNmlN6CuOtT+SeUe1dqlI7MHpIN0p" crossorigin="anonymous"></script>
+  <script src="static/js/script.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">LogonTracer</a>
+      <div class="collapse navbar-collapse">
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <label class="sr-only" for="InputSelect">select</label>
+            <select class="form-control" id="InputSelect">
+              <option>Username</option>
+              <option>Hostname</option>
+              <option>IPAddress</option>
+            </select>
+            <input class="form-control" type="text" value="administrator" id="query-input" size="10">
+            <div id="itemForm"></div>
+          </div>
+          <input type="button" class="btn btn-default" value="+" onclick="ItemField.add();" />
+          <input type="button" class="btn btn-default" value="-" onclick="ItemField.del();" />
+          <div class="checkbox">
+            <a>Event ID: </a>
+            <label>
+              <input type="checkbox" id="id4624" checked="checked"> 4624
+            </label>
+            <label>
+              <input type="checkbox" id="id4625" checked="checked"> 4625
+            </label>
+            <label>
+              <input type="checkbox" id="id4768" checked="checked"> 4768
+            </label>
+            <label>
+              <input type="checkbox" id="id4769" checked="checked"> 4769
+            </label>
+            <label>
+              <input type="checkbox" id="id4776" checked="checked"> 4776
+            </label>
+          </div>
+          <a>Count: </a>
+          <div class="form-group">
+            <input class="form-control" type="text" value=0 id="count-input" size="1">
+          </div>
+          <button type="button" class="btn btn-default" onclick="createQuery()">search</button>
+          <div class="btn-group">
+            <a href="#" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+              Export <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li role="presentation"><a onclick="exportCSV()">CSV</a></li>
+              <li role="presentation"><a download="image.json" id="export-json" onclick="exportJSON()">JSON</a></li>
+              <li role="presentation"><a download="image.png" id="export-png" onclick="exportPNG()">PNG</a></li>
+              <li role="presentation"><a download="image.jpeg" id="export-jpeg" onclick="exportJPEG()">JPEG</a></li>
+            </ul>
+          </div>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2 col-md-2 sidebar">
+        <div class="list-group">
+          <button type="button" class="list-group-item" onclick="createAllQuery()">All Users</button>
+          <button type="button" class="list-group-item" onclick="createSystemQuery()">SYSTEM Privileges</button>
+          <button type="button" class="list-group-item" onclick="createNTLMQuery()">NTLM Remote Logon</button>
+          <button type="button" class="list-group-item" onclick="createRDPQuery()">RDP Logon</button>
+          <button type="button" class="list-group-item" onclick="createNetQuery()">Network Logon</button>
+          <button type="button" class="list-group-item" onclick="createBatchQuery()">Batch Logon</button>
+          <button type="button" class="list-group-item" onclick="createServiceQuery()">Service Logon</button>
+          <button type="button" class="list-group-item" onclick="create14068Query()">MS14-068 Exploit Failure</button>
+          <button type="button" class="list-group-item" onclick="createFailQuery()">Logon Failure</button>
+          <button type="button" class="list-group-item" onclick="adddelUsersQuery()">Add/Delete Users</button>
+          <button type="button" class="list-group-item" onclick="createDomainQuery()">Domain Check</button>
+        </div>
+        <hr>
+        <a>Add event value</a><br>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default">
+            <input type="checkbox" name="options" id="label-count" autocomplete="off">Count</label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="options" id="label-type" autocomplete="off">Type</label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="options" id="label-status" autocomplete="off">Status</label>
+          <label class="btn btn-default">
+            <input type="checkbox" name="options" id="label-authname" autocomplete="off">AuthName</label>
+        </div>
+        <hr>
+        <a>Graph mode</a><br>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-default active">
+		        <input type="radio" id="modeGrid" name="graphmode" checked="checked">grid</label>
+          <label class="btn btn-default">
+		        <input type="radio" id="modeCose" name="graphmode">cose</label>
+          <label class="btn btn-default">
+		        <input type="radio" id="modeCircle" name="graphmode">circle</label>
+        </div>
+        <hr>
+        <a>Timeline</a><br>
+        <button class="btn btn-default" onClick="window.open('timeline')">Create Timeline</button>
+        <hr>
+        <a>Upload</a><br>
+        <button class="btn btn-default" data-toggle="modal" data-target="#UploadEVTX">Upload Event Log</button>
+      </div>
+      <div class="col-sm-8 col-md-8 main">
+        <div id="error"></div>
+        <div id="cy" style="height:900px;"></div>
+        <div id="loading">
+          <span class="fa fa-refresh fa-spin"></span>
+        </div>
+      </div>
+      <div class="col-sm-2 col-md-2">
+        <div class="container" id="rankUser"></div>
+        <ul class="pager">
+          <li><a onclick="pruserBack()">Back</a></li>
+          <li><a onclick="pruserNext()">Next</a></li>
+        </ul>
+        <hr>
+        <div class="container" id="rankHost"></div>
+        <ul class="pager">
+          <li><a onclick="prhostBack()">Back</a></li>
+          <li><a onclick="prhostNext()">Next</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Upload -->
+  <div class="modal fade" id="UploadEVTX" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span>×</span></button>
+          <h4 class="modal-title">Upload Event Log File</h4>
+        </div>
+        <div class="modal-body">
+          <div id="zoneTime"></div>
+          <div class="col-xs-2">
+            <select class="form-control" id="logType">
+              <option>EVTX</option>
+              <option>XML</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <input multiple id="lefile" type="file" style="display:none">
+            <input type="text" id="evtx_name" class="form-control" placeholder="select file (multi files) ...">
+            <span class="input-group-btn"><button type="button" class="btn btn-info" onclick="$('input[id=lefile]').click();">Browse</button></span>
+          </div>
+          <div id="uploadBar"></div>
+          <div id="status"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary" onclick="file_upload()">Upload</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <a href="log" target="_blank"><button type="button" class="btn btn-default">Log</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Warning message -->
+  <div class="modal fade" id="warningMessage" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">WARNING!</h4>
+        </div>
+        <div class="modal-body">
+          <p>Web page loading slow due to large graph. Do you want to continue searching?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" onclick="contQuery()" data-dismiss="modal">Yes</button>\
+          <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    var neo = neo4j.default;
+    //Neo4j access settings
+    var driver = neo.driver("bolt://{{ server_ip }}", neo.auth.basic("{{ neo4j_user }}", "{{ neo4j_password }}"));
+    var session = driver.session();
+    var cy = cytoscape();
+    var rankpageUser = 0
+    var rankpageHost = 0
+
+    var userqueryStr = 'MATCH (node:Username) RETURN node ORDER BY node.rank DESC';
+    var ipqueryStr = 'MATCH (node:IPAddress) RETURN node ORDER BY node.rank DESC';
+    pagerankQuery(userqueryStr, "User", rankpageUser);
+    pagerankQuery(ipqueryStr, "Host", rankpageHost);
+    logdeleteCheck();
+
+    var loading = document.getElementById('loading');
+    loading.classList.add('loaded');
+
+    var currentNumber = 0;
+    var ItemField = {
+      currentNumber: 0,
+      itemTemplate: '<label class="sr-only" for="InputSelect">select</label>\
+                                <select class="form-control" id="InputSelect_count_">\
+                                <option>Username</option><option>Hostname</option><option>IPAddress</option></select>\
+                                <input class="form-control" type="text" id="query-input_count_" size="10">\
+                                <label class="sr-only" for="InputSelect">select</label>\
+                                <select class="form-control" id="InputRule_count_">\
+                                <option>OR</option><option>AND</option></select>',
+      add: function() {
+        currentNumber++;
+        if (currentNumber <= 10) {
+          var new_item = this.itemTemplate.replace(/_count_/mg, currentNumber);
+          var new_area = document.createElement("div");
+          new_area.setAttribute("id", "item" + currentNumber);
+          var field = document.getElementById('itemForm');
+          field.appendChild(new_area);
+          document.getElementById('item' + currentNumber).innerHTML = new_item;
+        }
+      },
+      del: function() {
+        if (currentNumber == 0) {
+          return;
+        }
+        var field = document.getElementById('itemForm');
+        field.removeChild(field.lastChild);
+        currentNumber--;
+      }
+    }
+
+    var downMenu = '<div class="col-xs-2"><select class="form-control" id="utcTime"><option>Time Zone</option>';
+    for (i = +14; i >= -12; i--) {
+      downMenu += '<option>' + i + '</option>';
+    }
+    downMenu += '</select></div>';
+    document.getElementById("zoneTime").innerHTML = downMenu;
+
+    $('input[id=lefile]').change(function() {
+      var inFile = "";
+      var fileList = document.getElementById("lefile").files;
+      if (1 < fileList.length) {
+        inFile += "selected " + fileList.length + " files."
+      } else {
+        inFile += fileList[0].name
+      }
+      $('#evtx_name').val(inFile.replace("C:\\fakepath\\", ""));
+    });
+  </script>
+</body>
+
+</html>

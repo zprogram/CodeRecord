@@ -1,0 +1,5 @@
+﻿<command>
+    <execute>
+    "C:\Windows\System32\calc.exe"
+    </execute>
+</command>

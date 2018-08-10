@@ -1,0 +1,6 @@
+﻿^F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\DOEXEC.C
+/c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"X64\DEBUG\\" /Fd"X64\DEBUG\VC140.PDB" /Gd /TC F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\DOEXEC.C
+^F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\GETOPT.C
+/c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"X64\DEBUG\\" /Fd"X64\DEBUG\VC140.PDB" /Gd /TC F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\GETOPT.C
+^F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\NETCAT.C
+/c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"X64\DEBUG\\" /Fd"X64\DEBUG\VC140.PDB" /Gd /TC F:\资料存档\00CODERECORD\12WIN32编程\反弹SHELL配置器\NETCAT\NETCAT.C

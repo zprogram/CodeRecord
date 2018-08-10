@@ -1,0 +1,18 @@
+﻿生成启动时间为 2018/05/15 12:02:47。
+     1>项目“G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\mimilove\mimilove.vcxproj”在节点 4 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX /Ox /Ob2 /Os /Oy /GL /D WIN32 /D NDEBUG /D _CONSOLE /D MIMIKATZ_W2000_SUPPORT /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /GF /Gm- /MT /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\\" /Fd"x64\vc140.pdb" /Gd /TC /errorReport:none ..\modules\kull_m_kernel.c ..\modules\kull_m_memory.c ..\modules\kull_m_minidump.c ..\modules\kull_m_output.c ..\modules\kull_m_process.c ..\modules\kull_m_string.c mimilove.c
+         kull_m_kernel.c
+         kull_m_memory.c
+         kull_m_minidump.c
+         kull_m_output.c
+         kull_m_process.c
+         kull_m_string.c
+     1>..\modules\kull_m_string.c(147): error C2220: 警告被视为错误 - 没有生成“object”文件
+     1>..\modules\kull_m_string.c(147): warning C4013: “wsprint”未定义；假设外部返回 int
+         mimilove.c
+     1>已完成生成项目“G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\mimilove\mimilove.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:03.73

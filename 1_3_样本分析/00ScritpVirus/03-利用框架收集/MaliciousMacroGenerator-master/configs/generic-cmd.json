@@ -1,0 +1,12 @@
+﻿{
+	"description": "Generic command exec payload\nEvasion technique set to none",
+	"template": "templates/payloads/generic-cmd-template.vba",
+	"varcount": 150,
+	"encodingoffset": 4,
+	"chunksize": 200,
+	"encodedvars": 	{},
+	"vars": 	[],
+	"evasion": 	["encoder"],
+	"payload": "cmd.exe /c whoami"
+}
+

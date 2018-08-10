@@ -1,0 +1,41 @@
+﻿生成启动时间为 2018/05/15 12:02:47。
+     1>项目“G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\mimilib\mimilib.vcxproj”在节点 3 上(Rebuild 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX /Ox /Ob2 /Os /Oy /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _USING_V110_SDK71_ /D _WINDLL /D _UNICODE /D UNICODE /GF /Gm- /MT /GS- /Gy /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\\" /Fd"x64\vc140.pdb" /Gd /TC /errorReport:none kappfree.c kdhcp.c kdns.c kfilt.c kssp.c sekurlsadbg\kuhl_m_sekurlsa_nt6.c sekurlsadbg\kuhl_m_sekurlsa_packages.c sekurlsadbg\kuhl_m_sekurlsa_utils.c sekurlsadbg\kull_m_rpc.c "sekurlsadbg\kull_m_rpc_ms-credentialkeys.c" sekurlsadbg\kwindbg.c utils.c
+         kappfree.c
+         kdhcp.c
+         kdns.c
+         kfilt.c
+         kssp.c
+         kuhl_m_sekurlsa_nt6.c
+         kuhl_m_sekurlsa_packages.c
+         kuhl_m_sekurlsa_utils.c
+         kull_m_rpc.c
+         kull_m_rpc_ms-credentialkeys.c
+         kwindbg.c
+         utils.c
+       ResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.1A\bin\rc.exe /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /l"0x0409" /nologo /fo"x64\mimilib.res" mimilib.rc 
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:NONE /OUT:"G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.dll" /INCREMENTAL:NO /NOLOGO /WX advapi32.lib ntdll.min.lib rpcrt4.lib /DEF:"mimilib.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\Include\Manifest\dpiaware.manifest" /PDB:"G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.pdb" /ASSEMBLYDEBUG:DISABLE /SUBSYSTEM:CONSOLE,"5.02" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.lib" /MACHINE:X64 /SAFESEH:NO /DLL x64\mimilib.res
+         x64\kappfree.obj
+         x64\kdhcp.obj
+         x64\kdns.obj
+         x64\kfilt.obj
+         x64\kssp.obj
+         x64\kuhl_m_sekurlsa_nt6.obj
+         x64\kuhl_m_sekurlsa_packages.obj
+         x64\kuhl_m_sekurlsa_utils.obj
+         x64\kull_m_rpc.obj
+         "x64\kull_m_rpc_ms-credentialkeys.obj"
+         x64\kwindbg.obj
+         x64\utils.obj
+           正在创建库 G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.lib 和对象 G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.exp
+         正在生成代码
+         已完成代码的生成
+         mimilib.vcxproj -> G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\x64\mimilib.dll
+     1>已完成生成项目“G:\资料存档\00CodeRecord\22开源项目修改\mimikatz\mimilib\mimilib.vcxproj”(Rebuild 个目标)的操作。
+
+已成功生成。
+
+已用时间 00:00:06.06

@@ -1,0 +1,59 @@
+﻿##ignore this file##
+/target/
+/ipch/
+/Debug/
+/enc_temp_folder/
+/Release/FileManage_Command.iobj
+/Release/FileManage_Command.ipdb
+FileManage_Command.opensdf
+FileManage_Command.sdf
+.classpath
+.project
+.settings
+.svn     
+##filter databfile��sln file##
+*.mdb  
+*.ldb  
+*.sln   
+##class file##
+*.com  
+*.class  
+*.dll  
+*.exe  
+*.o  
+*.so 
+
+*.obj
+*.tlog
+*.lastbuildstate
+*.idb
+*.pdb
+*.pch
+*.res
+*.ilk
+*.exe
+*.sdf
+*.ipch
+*.log
+
+# compression file
+*.7z  
+*.dmg  
+*.gz  
+*.iso  
+*.jar  
+*.rar  
+*.tar  
+*.zip  
+*.via
+*.tmp
+*.err
+# OS generated files #  
+.DS_Store  
+.DS_Store?  
+._*  
+.Spotlight-V100  
+.Trashes  
+Icon?  
+ehthumbs.db  
+Thumbs.db  
