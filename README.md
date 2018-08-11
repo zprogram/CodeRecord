@@ -312,11 +312,12 @@
 
 ## 6、参考书籍
 
-- 《c语言程序设计》
-- 《C++程序设计300例》
-- 《剑指offer》
-- 《黑客免杀攻防》
+- c语言程序设计
+- C++程序设计300例
+- 剑指offer
+- 黑客免杀攻防
 - https://ctf-wiki.github.io/ctf-wiki/reverse/unpack/packer-introduction/
+- 精通windowsAPI函数接口编程实例
 
 
 
