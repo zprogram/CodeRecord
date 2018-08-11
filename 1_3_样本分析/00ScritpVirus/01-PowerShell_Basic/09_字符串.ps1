@@ -1,26 +1,26 @@
-# ×¢ÊÍ
+# æ³¨é‡Š
 
 <# 
 
-   ¶àĞĞ×¢ÊÍ
+   å¤šè¡Œæ³¨é‡Š
 
 #>
 
-# ×Ö·û´®·Ö¸î
+# å­—ç¬¦ä¸²åˆ†å‰²
 
 $string2 = "192.168.14.20,192.168.14.21,192.168.14.22,192.168.14.23"
 
-$string2 -split "," # ,ºÅ¹ıÂË³öIP
+$string2 -split "," # ,å·è¿‡æ»¤å‡ºIP
 
-# ×Ö·û´®Ìæ»»replace
+# å­—ç¬¦ä¸²æ›¿æ¢replace
 
 $string = "Hello C++" 
 
-$string -replace "c\+\+","World"   # Êä³ö $stringµÄÖµÎª Hello World
+$string -replace "c\+\+","World"   # è¾“å‡º $stringçš„å€¼ä¸º Hello World
 
 $string -replace ([Regex]::Escape("C++")),"Powershell Program"
 
 
-# ×Ö·û´®Æ´½Ó join
+# å­—ç¬¦ä¸²æ‹¼æ¥ join
 
 ('a','b','c') -join '/'

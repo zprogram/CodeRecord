@@ -1,18 +1,18 @@
-# # # - 06 条件语句 # # #
+# # # - 06 鏉′欢璇彞 # # #
  
  $a = 89
  $b = 90
  
- if($a -gt $b)         # 大于     
+ if($a -gt $b)         # 澶т簬     
  { 
-    echo "$a 大于 $b" 
+    echo "$a 澶т簬 $b" 
  
  }
- elseif($a -eq $b)     # 等于
+ elseif($a -eq $b)     # 绛変簬
  {
-    echo "$a 等于 $b"
+    echo "$a 绛変簬 $b"
  }
- elseif($a -lt $b)     # 小于
+ elseif($a -lt $b)     # 灏忎簬
  {
-  echo "$a 小于 $b"
+  echo "$a 灏忎簬 $b"
  }

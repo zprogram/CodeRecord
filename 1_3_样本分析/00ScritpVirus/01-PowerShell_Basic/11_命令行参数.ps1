@@ -1,10 +1,10 @@
-# ²ÎÊı´«Öµ,·µ»ØËùÓĞ²ÎÊı
+# å‚æ•°ä¼ å€¼,è¿”å›æ‰€æœ‰å‚æ•°
 
 Write-Host "Hello,$args"
 
-# PS C:\WINDOWS\system32> .11_ÃüÁîĞĞ²ÎÊı.ps1  "C++" "Powershell"
+# PS C:\WINDOWS\system32> .11_å‘½ä»¤è¡Œå‚æ•°.ps1  "C++" "Powershell"
 
-# ·ÃÎÊÊı×é²ÎÊı
+# è®¿é—®æ•°ç»„å‚æ•°
 
 For($i=0;$i -lt $args.Count; $i++)
 {

@@ -1,50 +1,50 @@
- # »ñÈ¡ÔËÐÐ½Å±¾Ä¿Â¼
+ # èŽ·å–è¿è¡Œè„šæœ¬ç›®å½•
 
 $x = $MyInvocation.MyCommand.Definition
 $x = Split-Path -Parent $MyInvocation.MyCommand.Definition
-echo "µ±Ç°Â·¾¶Îª: $X\"
+echo "å½“å‰è·¯å¾„ä¸º: $X\"
 
-# # - (3) ½»»¥Ê½SHELL # # #
+# # - (3) äº¤äº’å¼SHELL # # #
 
- # - 01 »ñÈ¡°ïÖúÃüÁî
+ # - 01 èŽ·å–å¸®åŠ©å‘½ä»¤
 
 Get-Help
 
- # - 02 ²éÕÒÊµÏÖÖ¸¶¨ÈÎÎñµÄÃüÁî
+ # - 02 æŸ¥æ‰¾å®žçŽ°æŒ‡å®šä»»åŠ¡çš„å‘½ä»¤
  
 Get-Command 
 
-Get-command pwd  # ²é¿´pwd¶ÔÓ¦µÄPowershellÃüÁî
+Get-command pwd  # æŸ¥çœ‹pwdå¯¹åº”çš„Powershellå‘½ä»¤
   
-Get-command ls   # ²é¿´ls¶ÔÓ¦µÄPowershellÃüÁî  
+Get-command ls   # æŸ¥çœ‹lså¯¹åº”çš„Powershellå‘½ä»¤  
 
-Get-command cd   # ²é¿´cd¶ÔÓ¦µÄPowershellÃüÁî
+Get-command cd   # æŸ¥çœ‹cdå¯¹åº”çš„Powershellå‘½ä»¤
 
- # - 03 ½«¹ÜµÀÊä³öµÄ½á¹û±£´æµ½ÎÄ¼þÖÐ
+ # - 03 å°†ç®¡é“è¾“å‡ºçš„ç»“æžœä¿å­˜åˆ°æ–‡ä»¶ä¸­
 
 
- # Í¨¹ýOut-FileÃüÁî»òÕßÖØ¶¨Ïò²Ù×÷·ûÃüÁîÊä³öµÄ½á¹û±£´æµ½ÎÄ¼þÖÐ
+ # é€šè¿‡Out-Fileå‘½ä»¤æˆ–è€…é‡å®šå‘æ“ä½œç¬¦å‘½ä»¤è¾“å‡ºçš„ç»“æžœä¿å­˜åˆ°æ–‡ä»¶ä¸­
  
 Get-Command  | Out-File $X\unicodefile.txt
 
 
- # - 04 »ñÈ¡½ø³ÌÐÅÏ¢
+ # - 04 èŽ·å–è¿›ç¨‹ä¿¡æ¯
  
 Get-Process 
-Get-Process | Export-CSV $X\procs.csv      # µ¼³öcsv
-Get-Process | Export-Clixml $X\procs.xml   # µ¼³öxml
+Get-Process | Export-CSV $X\procs.csv      # å¯¼å‡ºcsv
+Get-Process | Export-Clixml $X\procs.xml   # å¯¼å‡ºxml
 
- # - 05 »·¾³±äÁ¿
+ # - 05 çŽ¯å¢ƒå˜é‡
 
-dir ENV:                # ²é¿´ËùÓÐ»·¾³±äÁ¿
-$ENV:COMPUTERNAME       # ²é¿´¼ÆËã»úÃû
+dir ENV:                # æŸ¥çœ‹æ‰€æœ‰çŽ¯å¢ƒå˜é‡
+$ENV:COMPUTERNAME       # æŸ¥çœ‹è®¡ç®—æœºå
 
- # - 06 »ñÈ¡ÀúÊ·ÃüÁî
+ # - 06 èŽ·å–åŽ†å²å‘½ä»¤
  
 Get-History
 
 
- # - 07 ÏòÎÄ¼þµÄ½áÎ²´¦¼ÓÈëÐÅÏ¢,¹ÜµÀÒ²¿ÉÒÔ×·¼ÓÎÄ¼þ
+ # - 07 å‘æ–‡ä»¶çš„ç»“å°¾å¤„åŠ å…¥ä¿¡æ¯,ç®¡é“ä¹Ÿå¯ä»¥è¿½åŠ æ–‡ä»¶
  
 Get-Process >> $X\files.txt
 

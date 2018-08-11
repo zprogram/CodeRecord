@@ -1,45 +1,45 @@
-  # »ñÈ¡ÔËĞĞ½Å±¾Ä¿Â¼
+  # è·å–è¿è¡Œè„šæœ¬ç›®å½•
  
  $x = $MyInvocation.MyCommand.Definition
  $x = Split-Path -Parent $MyInvocation.MyCommand.Definition
- echo "µ±Ç°Â·¾¶Îª: $X\"
+ echo "å½“å‰è·¯å¾„ä¸º: $X\"
  
- # ²é¿´ÎÄ¼şÊÇ·ñ´æÔÚ1
+ # æŸ¥çœ‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨1
  
  $fobj = new-object System.IO.FileInfo "C:\hsrv.txt"
  if ($fobj.Exists){'the file does exist'}
  
- # ²é¿´ÎÄ¼şÊÇ·ñ´æÔÚ2
+ # æŸ¥çœ‹æ–‡ä»¶æ˜¯å¦å­˜åœ¨2
  if (Test-Path "C:\hsrv.txt") {'the file does exist'}
  
- # ´ÓÎÄ¼ş¶ÁÈ¡ÎÄ±¾
+ # ä»æ–‡ä»¶è¯»å–æ–‡æœ¬
  # $fobj = get-item "D:\filename.txt"
  $fobj = get-item "D:\20171111-test_bin2hex.txt"
- $strm = $fobj.OpenText()           # ´ò¿ªÎÄ¼ş
+ $strm = $fobj.OpenText()           # æ‰“å¼€æ–‡ä»¶
  $n = 0
  while(!$strm.EndOfStream){        
-     $txt = $strm.ReadLine()        # ¶ÁÈ¡ÎÄ¼ş
+     $txt = $strm.ReadLine()        # è¯»å–æ–‡ä»¶
      $n++
      "$n : $txt"
  
  }
- $strm.Dispose()                    # ¹Ø±ÕÎÄ¼ş
+ $strm.Dispose()                    # å…³é—­æ–‡ä»¶
  
  
- echo "¼´½«ÏÂÒ»¸ö¶ÁÈ¡ÎÄ¼şµÄ²Ù×÷"
+ echo "å³å°†ä¸‹ä¸€ä¸ªè¯»å–æ–‡ä»¶çš„æ“ä½œ"
  pause
  
- # Ê¹ÓÃ get-contentÖ´ĞĞ¶ÁÈ¡ÎÄ±¾²Ù×÷
+ # ä½¿ç”¨ get-contentæ‰§è¡Œè¯»å–æ–‡æœ¬æ“ä½œ
  
  $n = 0
  #Get-Content "D:\filename.txt"
  Get-Content "D:\20171111-test_bin2hex.txt" | foreach { $n++;"$n ; $_"}
  
 
-  echo "¼´½«Ö´ĞĞĞ´ÈëÎÄ¼şµÄ²Ù×÷"
+  echo "å³å°†æ‰§è¡Œå†™å…¥æ–‡ä»¶çš„æ“ä½œ"
  pause
  
-# ÏòÎÄ¼şĞ´ÈëÎÄ±¾
+# å‘æ–‡ä»¶å†™å…¥æ–‡æœ¬
 
 $fobj =  New-Object System.IO.FileInfo "D:\testfilename.txt"
 $strm =  $fobj.CreateText()

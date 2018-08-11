@@ -1,6 +1,6 @@
-# 9��0��ѭ��д��
+# 9到0的循环写法
 
-### whileѭ��ʾ��
+### while循环示例
 
 $a = 10
 while($a)
@@ -10,11 +10,11 @@ while($a)
 }
 
 
-## do..while��dountilʾ��
+## do..while和dountil示例
 
 echo "do..while"
 
-#do...while�ظ���ѭ�����������ʽΪFalse�Ļ���ѭ���˳���
+#do...while重复该循环，如果表达式为False的话，循环退出。
 
 $b = 10
 do
@@ -26,7 +26,7 @@ do
 
 echo "do..until"
 
-# do...until�ظ���ѭ�����������ʽΪTrue�Ļ���ѭ���˳���
+# do...until重复该循环，如果表达式为True的话，循环退出。
 
 $c = 10
 
@@ -36,7 +36,7 @@ do{
 }until($c -eq 0)
 
 
-## forѭ��
+## for循环
 
 echo "for"
 
@@ -45,7 +45,7 @@ for($d =10 ; $d -ge 0;$d--)
     $d
 }
 
-## foreachѭ��
+## foreach循环
 
 echo "foreach"
 

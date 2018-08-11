@@ -1,21 +1,21 @@
-# ÕûÊıÊı×é
+# æ•´æ•°æ•°ç»„
 
 $powers = 8,4,2,1
 
-# ×Ö·ûÊı×é
+# å­—ç¬¦æ•°ç»„
 
 $names = 'Alpha','Bravo','Charlie','Delta'
 
-# Êä³öÊı×é
+# è¾“å‡ºæ•°ç»„
 
 $names
 
-## ·ÃÎÊµ¥¶ÀµÄÏî
+## è®¿é—®å•ç‹¬çš„é¡¹
 
 Write-Output("Array value [0]: "+ $names[0])
 Write-Output("Array value [1]: "+ $names[1])
 
 
-## Êı×éµÄ´óĞ¡
+## æ•°ç»„çš„å¤§å°
 
 $names.Count

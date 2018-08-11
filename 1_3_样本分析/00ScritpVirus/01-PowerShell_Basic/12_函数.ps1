@@ -1,13 +1,13 @@
-# 函数定义
+# 鍑芥暟瀹氫箟
 
 function simple(){
     return 1
 }
 
-## 调用函数
+## 璋冪敤鍑芥暟
 simple
 
-# 带参数的函数
+# 甯﹀弬鏁扮殑鍑芥暟
 
 function printmsg
 {
@@ -15,17 +15,17 @@ function printmsg
     Write-Output $level,$message
 }
 
-## 带参调用函数
+## 甯﹀弬璋冪敤鍑芥暟
 printmsg 4 'this is the message'
 
-# param语句
+# param璇彞
 function printparam
 {
    param([string]$level=1,[string]$message)
    Write-Output  $level,$message
 }
 
-## 指定参数
+## 鎸囧畾鍙傛暟
 printparam -message 'this is the message' -level 10
 
 

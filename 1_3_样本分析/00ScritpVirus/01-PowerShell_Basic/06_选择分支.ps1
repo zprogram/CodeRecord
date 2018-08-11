@@ -1,7 +1,7 @@
 
-# # # - 07 选择分支 # # #
+# # # - 07 閫夋嫨鍒嗘敮 # # #
 
-# 将If-ElseIF-Else转换成Switch语句
+# 灏咺f-ElseIF-Else杞崲鎴怱witch璇彞
 
 $a = {1,2,3,4,5}
 $b = 2
