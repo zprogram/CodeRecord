@@ -1,13 +1,13 @@
-ï»¿# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+# º¯Êý¶¨Òå
 
 function simple(){
     return 1
 }
 
-## ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½
+## µ÷ÓÃº¯Êý
 simple
 
-# ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½ï¿½ï¿½
+# ´ø²ÎÊýµÄº¯Êý
 
 function printmsg
 {
@@ -15,17 +15,17 @@ function printmsg
     Write-Output $level,$message
 }
 
-## ï¿½ï¿½ï¿½Îµï¿½ï¿½Ãºï¿½ï¿½ï¿½
+## ´ø²Îµ÷ÓÃº¯Êý
 printmsg 4 'this is the message'
 
-# paramï¿½ï¿½ï¿½
+# paramÓï¾ä
 function printparam
 {
    param([string]$level=1,[string]$message)
    Write-Output  $level,$message
 }
 
-## Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+## Ö¸¶¨²ÎÊý
 printparam -message 'this is the message' -level 10
 
 

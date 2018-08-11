@@ -1,50 +1,50 @@
-ï»¿ # ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ð½Å±ï¿½Ä¿Â¼
+ # »ñÈ¡ÔËÐÐ½Å±¾Ä¿Â¼
 
 $x = $MyInvocation.MyCommand.Definition
 $x = Split-Path -Parent $MyInvocation.MyCommand.Definition
-echo "ï¿½ï¿½Ç°Â·ï¿½ï¿½Îª: $X\"
+echo "µ±Ç°Â·¾¶Îª: $X\"
 
-# # - (3) ï¿½ï¿½ï¿½ï¿½Ê½SHELL # # #
+# # - (3) ½»»¥Ê½SHELL # # #
 
- # - 01 ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ # - 01 »ñÈ¡°ïÖúÃüÁî
 
 Get-Help
 
- # - 02 ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ # - 02 ²éÕÒÊµÏÖÖ¸¶¨ÈÎÎñµÄÃüÁî
  
 Get-Command 
 
-Get-command pwd  # ï¿½é¿´pwdï¿½ï¿½Ó¦ï¿½ï¿½Powershellï¿½ï¿½ï¿½ï¿½
+Get-command pwd  # ²é¿´pwd¶ÔÓ¦µÄPowershellÃüÁî
   
-Get-command ls   # ï¿½é¿´lsï¿½ï¿½Ó¦ï¿½ï¿½Powershellï¿½ï¿½ï¿½ï¿½  
+Get-command ls   # ²é¿´ls¶ÔÓ¦µÄPowershellÃüÁî  
 
-Get-command cd   # ï¿½é¿´cdï¿½ï¿½Ó¦ï¿½ï¿½Powershellï¿½ï¿½ï¿½ï¿½
+Get-command cd   # ²é¿´cd¶ÔÓ¦µÄPowershellÃüÁî
 
- # - 03 ï¿½ï¿½ï¿½Üµï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½æµ½ï¿½Ä¼ï¿½ï¿½ï¿½
+ # - 03 ½«¹ÜµÀÊä³öµÄ½á¹û±£´æµ½ÎÄ¼þÖÐ
 
 
- # Í¨ï¿½ï¿½Out-Fileï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½æµ½ï¿½Ä¼ï¿½ï¿½ï¿½
+ # Í¨¹ýOut-FileÃüÁî»òÕßÖØ¶¨Ïò²Ù×÷·ûÃüÁîÊä³öµÄ½á¹û±£´æµ½ÎÄ¼þÖÐ
  
 Get-Command  | Out-File $X\unicodefile.txt
 
 
- # - 04 ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+ # - 04 »ñÈ¡½ø³ÌÐÅÏ¢
  
 Get-Process 
-Get-Process | Export-CSV $X\procs.csv      # ï¿½ï¿½ï¿½ï¿½csv
-Get-Process | Export-Clixml $X\procs.xml   # ï¿½ï¿½ï¿½ï¿½xml
+Get-Process | Export-CSV $X\procs.csv      # µ¼³öcsv
+Get-Process | Export-Clixml $X\procs.xml   # µ¼³öxml
 
- # - 05 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ # - 05 »·¾³±äÁ¿
 
-dir ENV:                # ï¿½é¿´ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-$ENV:COMPUTERNAME       # ï¿½é¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+dir ENV:                # ²é¿´ËùÓÐ»·¾³±äÁ¿
+$ENV:COMPUTERNAME       # ²é¿´¼ÆËã»úÃû
 
- # - 06 ï¿½ï¿½È¡ï¿½ï¿½Ê·ï¿½ï¿½ï¿½ï¿½
+ # - 06 »ñÈ¡ÀúÊ·ÃüÁî
  
 Get-History
 
 
- # - 07 ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½Ä½ï¿½Î²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢,ï¿½Üµï¿½Ò²ï¿½ï¿½ï¿½ï¿½×·ï¿½ï¿½ï¿½Ä¼ï¿½
+ # - 07 ÏòÎÄ¼þµÄ½áÎ²´¦¼ÓÈëÐÅÏ¢,¹ÜµÀÒ²¿ÉÒÔ×·¼ÓÎÄ¼þ
  
 Get-Process >> $X\files.txt
 
