@@ -76,7 +76,6 @@
 
 - 钩子技术
 - - SSDT钩子
-- - IAT钩子
 - - SYSENETR钩子
 - - 内联钩子
 - - IRP钩子
@@ -85,7 +84,7 @@
 - - LADDR钩子
 - Anti Rootkit
 - - 检查SSDT钩子与IDT钩子
-- - 检查IAT钩子
+- - 检查IAT
 - - 检查IRP钩子
 - - 检查内联钩子
 
