@@ -72,6 +72,23 @@
 
 #### 1.1.7、RootKit基础
 
+- 内核编程基础
+
+- 钩子技术
+- - SSDT钩子
+- - IAT钩子
+- - SYSENETR钩子
+- - 内联钩子
+- - IRP钩子
+- - IDT钩子
+- - IOAPIC钩子
+- - LADDR钩子
+- Anti Rootkit
+- - 检查SSDT钩子与IDT钩子
+- - 检查IAT钩子
+- - 检查IRP钩子
+- - 检查内联钩子
+
 #### 1.1.8、产出：安全编程项目
 
 - Windows安全卫士
