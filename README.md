@@ -40,14 +40,46 @@
 
 [](https://github.com/zprogram/CodeRecord/tree/master/03Win_Program)
 
-- 文件操作
-- 进程
-- 服务操作
-- 注册表操作
-- 动态链接库
-- 钩子函数
-- 进程间通信
-- API HOOK
+- Windows数据类型
+- 文件系统
+- - 磁盘和驱动器管理
+  - GetLogicalDriveStrings：获取主机中所有的逻辑驱动器
+  - FindFirstVolume：查找主机的第一个驱动器，返回查找句柄
+  - GetDriverType：获取驱动器类型
+- - 文件和目录管理
+  - DeleteFile：删除参数所指定的文件
+  - CopyFile：复制指定文件为一个新文件
+  - MoveFile：将指定文件或目录移动到指定位置
+  - CreateFile：新建或打开一个文件，获取文件句柄
+  - ReadFile：读取由文件句柄指定的文件中写入内容
+  - WriteFile：向由文件句柄指定的文件中写入内容
+  - GetFileSize：获取文件大小
+  - CreateDirectory：创建一个目录
+  - GetCurrentDirectory：获取当前程序所在目录
+  - SetCurrentDirectory：设置当前程序所在目录
+  - GetModuleFileName：获取当前模块路径
+  - FindFirstFile：查找指定目录下第一个文件或目录，获得查找句柄
+  - FindNextFile：根据FindFirstFile获得的句柄，循环查找文件和目录
+  - GetFileAttributesEx：获取指定文件或目录属性
+  - SetFileAttributes：将文件属性设定为指定值
+  - FileTimeToLocalFileTime：将文件时间转换为本地时间
+  - FileTimeToSystemTime：将文件时间转换为系统时间
+- - 内存映射文件
+  - GetSystemInfo：获取系统内存分配粒度
+  - CreateFileMapping：创建mapping对象
+  - MapViewOfFile：创建视图，将文件maping映射到当前进程内存虚拟地址空间。
+  - FlushViewOfFile：将视图中的文件数据写入到磁盘上
+  - FillMemory：填充内存
+  - CopyMemory：复制内存
+  - GetMappedFileName：从映射对象获取被映射文件的文件设备名
+  - QueryDosDevice：获取MS_DOS设备名，例如将C:转换为设备名，"\\Device\\HarddiskVolume3"
+
+- 内存管理
+- - Windows内存管理原理
+- - 堆管理
+- - 全局（Global）和局部（Local）内存管理
+- - 虚拟内存管理
+- - 内存操作与内存信息管理
 
 #####  网络通信编程
 
