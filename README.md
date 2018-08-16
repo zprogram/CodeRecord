@@ -74,8 +74,8 @@
   - GetMappedFileName：从映射对象获取被映射文件的文件设备名
   - QueryDosDevice：获取MS_DOS设备名，例如将C:转换为设备名，"\\Device\\HarddiskVolume3"
 
-- 内存管理
-- - Windows内存管理原理
+- 进程、线程和模块
+- - CreateProcess：创建进程
 - - 堆管理
 - - 全局（Global）和局部（Local）内存管理
 - - 虚拟内存管理
