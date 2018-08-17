@@ -7,7 +7,7 @@
     </Filter>
     <Filter Include="头文件">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
@@ -15,13 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="模仿Gh0st加密上线地址.h">
+    <ClInclude Include="file_gh0st_encode.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="模仿Gh0st加密上线地址Dlg.h">
+    <ClInclude Include="file_gh0st_encodeDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -35,10 +32,10 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="模仿Gh0st加密上线地址.cpp">
+    <ClCompile Include="file_gh0st_encode.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="模仿Gh0st加密上线地址Dlg.cpp">
+    <ClCompile Include="file_gh0st_encodeDlg.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
@@ -46,17 +43,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="模仿Gh0st加密上线地址.rc">
+    <ResourceCompile Include="filegh0stencode.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\Gh0st.rc2">
+    <None Include="res\filegh0stencode.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\模仿Gh0st加密上线地址.ico">
+    <Image Include="res\file_gh0st_encode.ico">
       <Filter>资源文件</Filter>
     </Image>
   </ItemGroup>
