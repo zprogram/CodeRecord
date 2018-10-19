@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器</title>
+</head>
+<body>
+# 如果avatar这个变量不存在，就使用default过滤器提供的值
+
+<img src="{{ avatar|default('http://avatar.csdn.net/1/D/B/3_hmzkekek41.jpg') }}" alt="">
+
+<hr>
+
+<p>评论数：({{ comments|length }})</p>
+<ul>
+    {% for comment in comments %}
+        <li>
+            <a href="#">{{ comment.user }}</a>
+            <p>{{ comment.content }}</p>
+        </li>
+    {% endfor %}
+
+</ul>
+</body>
+</html>
