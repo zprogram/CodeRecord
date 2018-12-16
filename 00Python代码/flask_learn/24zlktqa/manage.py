@@ -7,6 +7,9 @@ from exts import db
 from models import User,Question,Answer
 
 
+
+
+
 manager = Manager(app)
 
 # 使用Migrate绑定app和db

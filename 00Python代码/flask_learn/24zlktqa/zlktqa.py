@@ -42,7 +42,7 @@ def regist():
         return render_template('regist.html')
     else:
         telephone = request.form.get('telephone')
-        username = request.form.get('username')
+        username  = request.form.get('username')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
