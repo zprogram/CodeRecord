@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CEdit", "CEdit\CEdit.vcxproj", "{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Debug|x64.ActiveCfg = Debug|x64
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Debug|x64.Build.0 = Debug|x64
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Debug|x86.ActiveCfg = Debug|Win32
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Debug|x86.Build.0 = Debug|Win32
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Release|x64.ActiveCfg = Release|x64
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Release|x64.Build.0 = Release|x64
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Release|x86.ActiveCfg = Release|Win32
+		{E1DC087E-8F0B-4B27-82C2-396D98C3CD31}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A989A5F-6D8C-4EE9-84C2-8E959417873A}
+	EndGlobalSection
+EndGlobal
